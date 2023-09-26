@@ -17,7 +17,7 @@ java --version'''
 
     stage('Post Build Steps ') {
       steps {
-        writeFile(file: 'status.txt', text: 'Funcionó ')
+        writeFile(file: 'status.txt', text: 'FuncionÃ³ ')
       }
     }
 
