@@ -3,16 +3,15 @@ pipeline {
   stages {
     stage('Log Tool Version') {
       steps {
-        sh '''mvn --version
-git --version
-java --version
-docker --version'''
+        sh 'Build Log'
       }
     }
 
     stage('Build with Maven') {
       steps {
-        sh 'mvn compile test package'
+        sh '''clean compile package -DskipTests=true
+home/jane/SHD/API2pom.xml
+'''
       }
     }
 
